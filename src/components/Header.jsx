@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/CineScout🎥📺.png";
 
-const Header = () => {
+const Header = ({ query, setQuery }) => {
   return (
     <div>
       <div className="w-screen h-32 bg-gradient-to-r from-zinc-800 to-black text-white flex  ">
@@ -16,6 +16,8 @@ const Header = () => {
           </Link>
           <input
             type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
             placeholder="Search Movies Here"
             className="bg-neutral-900 text-fuchsia-50 text-xl p-4 m-4 rounded-xl  w-2xl"
           />
