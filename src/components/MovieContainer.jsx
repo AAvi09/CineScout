@@ -1,11 +1,11 @@
 import React from "react";
 import MoviesList from "./MoviesList";
 
-const MovieContainer = ({ query }) => {
+const MovieContainer = ({ query, movies }) => {
   return (
-    <div className="bg-black h-screen w-screen">
+    <div className="bg-black h-max w-screen">
       {query && <h1 className="text-4xl text-white">{query}</h1>}
-      <MoviesList />
+      <MoviesList movies={movies} />
     </div>
   );
 };
