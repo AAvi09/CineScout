@@ -6,8 +6,6 @@ const LandingPage = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState();
   const fetchMovies = async (query) => {
-    setQuery("batman");
-
     const response = await fetch(
       `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
     );
